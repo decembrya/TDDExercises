@@ -20,6 +20,7 @@ namespace TddExercises
                 {3, "III"},
                 {4, "IV"},
                 {5, "V"},
+                {6, "VI"},
             };
 
         public string Convert(int input)
@@ -29,7 +30,28 @@ namespace TddExercises
                 return string.Empty;
             }
 
-            return dictionary[input];
+            var response  = new StringBuilder();
+
+            while(input > 0)
+            {
+                if(input >= 5)
+                {
+                    response.Append("V");
+                    input -= 5;
+                }
+                else if (input == 4)
+                {
+                    response.Append("IV");
+                    input -= 4;
+                }
+                else if(input < 4)
+                {
+                    response.Append("I");
+                    input -= 1;
+                }
+            }
+
+            return response.ToString();
         }
     }
 }
