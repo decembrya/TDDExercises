@@ -1,3 +1,4 @@
+using FluentAssertions;
 using Xunit;
 
 namespace TddExercises.Tests
@@ -9,7 +10,11 @@ namespace TddExercises.Tests
         [Fact]
         public void Test1()
         {
+            var input = 1;
 
+            var result = new RomanNumeralsConverter().Convert(input);
+
+            result.Should().Be("I");
         }
     }
 }

@@ -7,7 +7,11 @@
     //examples:
     //1-> I
     //11-> XI
-    public class Class1
+    public class RomanNumeralsConverter
     {
+        public string Convert(int input)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
