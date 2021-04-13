@@ -9,6 +9,7 @@ namespace TddExercises.Tests
         [InlineData(0, "")]
         [InlineData(1, "I")]
         [InlineData(2, "II")]
+        [InlineData(3, "III")]
         [InlineData(4, "IV")]
         [InlineData(5, "V")]
         [Theory]

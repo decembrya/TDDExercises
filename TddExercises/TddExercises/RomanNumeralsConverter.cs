@@ -11,12 +11,22 @@ namespace TddExercises
     //11-> XI
     public class RomanNumeralsConverter
     {
-        private Dictionary<int, string> dictionary = new Dictionary<int, string>() { { 1, "I" }, { 2, "II" }, { 4, "IV" }, { 5, "V" } };
+        private Dictionary<int, string> dictionary = new Dictionary<int, string>
+        {
+            { 1, "I" },
+            { 2, "II" },
+            { 4, "IV" }, 
+            { 5, "V" }
+        };
 
         public string Convert(int input)
         {
-            return dictionary[input];
+            if(!dictionary.ContainsKey(input))
+            {
+                return string.Empty;
+            }
 
+            return dictionary[input];
         }
     }
 }
