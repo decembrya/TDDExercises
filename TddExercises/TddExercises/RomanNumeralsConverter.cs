@@ -11,7 +11,12 @@
     {
         public string Convert(int input)
         {
-            return "I";
+            if (input == 1)
+            {
+                return "I";
+            }
+
+            return "II";
         }
     }
 }

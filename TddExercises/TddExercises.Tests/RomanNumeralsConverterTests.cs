@@ -5,7 +5,7 @@ namespace TddExercises.Tests
 {
     //Red-Green-Refactor
    
-    public class UnitTest1
+    public class RomanNumeralsConverterTests
     {
         [Fact]
         public void When_InputIsOne_Return_I()
@@ -25,6 +25,16 @@ namespace TddExercises.Tests
             var result = new RomanNumeralsConverter().Convert(input);
 
             result.Should().Be("II");
+        }
+
+        [Fact]
+        public void When_InputIsTwo_Return_IV()
+        {
+            var input = 4;
+
+            var result = new RomanNumeralsConverter().Convert(input);
+
+            result.Should().Be("IV");
         }
     }
 }
